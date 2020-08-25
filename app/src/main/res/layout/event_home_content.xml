@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:forceDarkAllowed="true"
+    android:layout_margin="@dimen/small_margin"
+    app:cardElevation="4dp"
+    android:focusable="true">
+    <include layout="@layout/event_content"/>
+</com.google.android.material.card.MaterialCardView>

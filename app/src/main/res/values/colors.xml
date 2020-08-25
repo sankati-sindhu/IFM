@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="green_900">#005900</color>
+    <color name="green_800">#007700</color>
+    <color name="green_700">#138808</color>
+    <color name="green_600">#249a18</color>
+    <color name="green_500">#2fa821</color>
+    <color name="green_400">#53b548</color>
+    <color name="green_300">#73c269</color>
+    <color name="green_200">#9dd295</color>
+    <color name="green_100">#c3e4be</color>
+    <color name="green_50">#e6f4e5</color>
+
+    <color name="blue_900">#007580</color>
+    <color name="blue_800">#0099b0</color>
+    <color name="blue_700">#00adc9</color>
+    <color name="blue_600">#00c3e6</color>
+    <color name="blue_500">#00d4fa</color>
+    <color name="blue_400">#00dcfd</color>
+    <color name="blue_300">#00e3ff</color>
+    <color name="blue_200">#74ecff</color>
+    <color name="blue_100">#aff3ff</color>
+    <color name="blue_50">#e0faff</color>
+    <color name="s">#662B1B</color>
+    <color name="saffron_900">#fc7d2f</color>
+    <color name="saffron_800">#ff9933</color>
+    <color name="saffron_700">#ffa936</color>
+    <color name="saffron_600">#ffbb3a</color>
+    <color name="saffron_500">#ffc83f</color>
+    <color name="saffron_400">#ffd04a</color>
+    <color name="saffron_300">#ffda65</color>
+    <color name="saffron_200">#ffe48f</color>
+    <color name="saffron_100">#ffeeba</color>
+    <color name="saffron_50">#fff9e4</color>
+
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="colorPrimary">@color/blue_700</color>
+    <color name="colorPrimaryDark">@color/blue_900</color>
+    <color name="colorOnPrimary">@color/white</color>
+    <color name="colorBackGround">@color/white</color>
+    <color name="colorAccent">@color/saffron_800</color>
+</resources>

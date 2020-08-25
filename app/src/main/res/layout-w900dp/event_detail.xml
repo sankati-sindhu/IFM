@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="3">
+
+        <include layout="@layout/event_detail_content"/>
+    </androidx.core.widget.NestedScrollView>
+    <LinearLayout
+        android:id="@+id/event_action_bar"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+       >
+        <ImageView
+            android:id="@+id/eventBookmark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_bookmark_24"
+            android:layout_marginTop="@dimen/large_margin"
+            />
+        <ImageView
+            android:id="@+id/eventTextIncrease"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_format_size_24"
+            android:layout_marginTop="@dimen/large_margin"
+            />
+        <ImageView
+            android:id="@+id/eventTextDecrease"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/large_margin"
+            android:src="@drawable/ic_baseline_format_size_24"
+            />
+    </LinearLayout>
+
+</LinearLayout>
