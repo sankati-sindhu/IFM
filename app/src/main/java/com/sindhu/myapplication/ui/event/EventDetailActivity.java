@@ -1,6 +1,7 @@
 package com.sindhu.myapplication.ui.event;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 
 import com.sindhu.myapplication.R;
@@ -10,6 +11,10 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.ActionBar;
 import androidx.core.app.NavUtils;
+
+import android.transition.Explode;
+import android.transition.Fade;
+import android.transition.Slide;
 import android.view.MenuItem;
 
 /**
@@ -18,12 +23,19 @@ import android.view.MenuItem;
  * item details are presented side-by-side with a list of items
  * in a {@link HomeFragment}.
  */
+
 public class EventDetailActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_detail);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            // Apply activity transition
+            getWindow().setExitTransition(new Fade());
+
+        }
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.detail_toolbar);
         setSupportActionBar(toolbar);
 
@@ -54,6 +66,8 @@ public class EventDetailActivity extends AppCompatActivity {
                     .add(R.id.event_detail_container, fragment)
                     .commit();
         }
+
+
     }
 
     @Override
@@ -66,7 +80,6 @@ public class EventDetailActivity extends AppCompatActivity {
             // to navigate up one level in the application structure. For
             // more details, see the Navigation pattern on Android Design:
             //
-            // http://developer.android.com/design/patterns/navigation.html#up-vs-back
             //
             NavUtils.navigateUpTo(this, new Intent(this, HomeFragment.class));
 
@@ -74,4 +87,5 @@ public class EventDetailActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 }

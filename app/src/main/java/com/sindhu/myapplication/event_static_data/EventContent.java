@@ -1,6 +1,7 @@
 package com.sindhu.myapplication.event_static_data;
 
 import com.sindhu.myapplication.R;
+import com.sindhu.myapplication.bookmark_room_data.EventItem;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -8,18 +9,14 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Helper class for providing sample content for user interfaces created by
+ * Helper class for providing content for user interfaces created by
  * Android template wizards.
  * <p>
- * TODO: Replace all uses of this class before publishing your app.
  */
 public class EventContent {
 
     /**
-     * An array of sample (dummy) items.
-     */
-    /**
-     * An array of sample (dummy) items.
+     * List of event items which contains static data about the event
      */
     public static final List<EventItem> ITEMS = Arrays.asList(
             new EventItem("eic", R.string.event_year_eic, R.string.event_title_eic,R.string.event_content_eic, R.drawable.ic_eastindia),
@@ -42,16 +39,15 @@ public class EventContent {
 
     );
     /**
-     * A map of sample (dummy) items, by ID.
+     * A map of event items, by ID.
      */
-    public static final Map<String, EventItem> ITEM_MAP = new HashMap<String, EventItem>();
+    public static final Map<String, EventItem> ITEM_MAP = new HashMap<>();
 
     private static final int COUNT = ITEMS.size();
-
     static {
         for(int i = 0; i<COUNT;i++){
             EventItem eventItem = ITEMS.get(i);
-            ITEM_MAP.put(eventItem.id, eventItem);
+            ITEM_MAP.put(eventItem.getmId(), eventItem);
         }
     }
 
@@ -59,12 +55,13 @@ public class EventContent {
     /**
      * A Event item which contains represents the data within a event
      */
-    public static class EventItem {
+    /*public static class EventItem {
         public final String id;
         public final int year;
         public final int eventTitle;
         public final int eventContent;
         public final int eventImageId;
+        public Boolean eventBookmarked;//this gets updated every time an array is initialized
 
         public EventItem(String id, int year, int eventTitle, int eventContent, int eventImageId) {
             this.id = id;
@@ -72,8 +69,9 @@ public class EventContent {
             this.eventTitle = eventTitle;
             this.eventContent = eventContent;
             this.eventImageId = eventImageId;
+            this.eventBookmarked = false;
         }
 
 
-    }
+    }*/
 }

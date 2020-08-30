@@ -9,22 +9,36 @@ import java.util.List;
 
 public class BookmarkViewModel extends AndroidViewModel {
     private BookmarkRepository mRepository;
+   // private List<Bookmark> mAllBookmarks;
+    private LiveData<List<EventItem>> mBookmarks;
 
-    private LiveData<List<Bookmark>> mAllBookmarks;
 
     public BookmarkViewModel (Application application) {
         super(application);
         mRepository = new BookmarkRepository(application);
-        mAllBookmarks = mRepository.getAllBookmarks();
+       // mAllBookmarks = mRepository.getAllBookmarks();
+        mBookmarks = mRepository.getBookmarks();
     }
 
-    public LiveData<List<Bookmark>> getAllBookmarks() {
-        return mAllBookmarks;
+   // public List<Bookmark> getAllBookmarks() {
+     //   return (List<Bookmark>) mAllBookmarks;
+    //}
+
+    public LiveData<List<EventItem>> getBookmarks() {
+        return mBookmarks;
     }
 
 
-    public void insert(Bookmark bookmark) { mRepository.insert(bookmark); }
+    public void insert(EventItem eventItem) { mRepository.insert(eventItem); }
+    public EventItem getBookmarked(String id){
+        return  mRepository.mbookmarksDao.getBookmarked(id);
+    }
+    public void delete(EventItem eventItem) { mRepository.delete(eventItem); }
+    /*This is for Update Method*/
+    public void update(EventItem eventItem){
+        mRepository.update(eventItem);
+    }
 
-    public void delete(Bookmark bookmark) { mRepository.delete(bookmark); }
+
 }
 

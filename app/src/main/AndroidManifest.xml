@@ -10,17 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.bookmarks.BookmarksFragment"
+            android:name=".ui.eventItems.BookmarksFragment"
             android:label="@string/title_event_list"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".EventDetailActivity"
             android:label="@string/title_event_detail"
-            android:parentActivityName=".ui.bookmarks.BookmarksFragment"
+            android:parentActivityName=".ui.eventItems.BookmarksFragment"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.sindhu.myapplication.ui.bookmarks.BookmarksFragment" />
+                android:value="com.sindhu.myapplication.ui.eventItems.BookmarksFragment" />
         </activity>
         <activity
             android:name=".MainActivity"

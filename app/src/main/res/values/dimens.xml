@@ -9,6 +9,8 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
     <dimen name="nav_header_height">176dp</dimen>
+
+    <!--padding-->
     <dimen name="xsmall_padding">3dp</dimen>
     <dimen name="small_padding">6dp</dimen>
     <dimen name="basic_padding">12dp</dimen>
@@ -24,4 +26,39 @@
     <dimen name="xlarge_margin">48dp</dimen>
     <dimen name="line_spacing">8dp</dimen>
     <dimen name="text_size">14sp</dimen>
+
+    <!-- event content size-->
+    <dimen name="text_size_1">14sp</dimen>
+    <dimen name="text_size_2">17sp</dimen>
+    <dimen name="text_size_3">20sp</dimen>
+    <dimen name="text_size_4">23sp</dimen>
+    <dimen name="text_size_5">26sp</dimen>
+    <dimen name="text_size_6">29sp</dimen>
+    <dimen name="text_size_7">32sp</dimen>
+    <dimen name="text_size_8">35sp</dimen>
+    <dimen name="text_size_9">38sp</dimen>
+
+    <!--title size-->
+    <dimen name="title_size_1">21sp</dimen>
+    <dimen name="title_size_2">24sp</dimen>
+    <dimen name="title_size_3">27sp</dimen>
+    <dimen name="title_size_4">30sp</dimen>
+    <dimen name="title_size_5">33sp</dimen>
+    <dimen name="title_size_6">36sp</dimen>
+    <dimen name="title_size_7">39sp</dimen>
+    <dimen name="title_size_8">42sp</dimen>
+    <dimen name="title_size_9">45sp</dimen>
+
+    <!--Subtitle size-->
+    <dimen name="sub_title_size_1">16sp</dimen>
+    <dimen name="sub_title_size_2">19sp</dimen>
+    <dimen name="sub_title_size_3">22sp</dimen>
+    <dimen name="sub_title_size_4">25sp</dimen>
+    <dimen name="sub_title_size_5">28sp</dimen>
+    <dimen name="sub_title_size_6">31sp</dimen>
+    <dimen name="sub_title_size_7">34sp</dimen>
+    <dimen name="sub_title_size_8">37sp</dimen>
+    <dimen name="sub_title_size_9">40sp</dimen>
+
+
 </resources>

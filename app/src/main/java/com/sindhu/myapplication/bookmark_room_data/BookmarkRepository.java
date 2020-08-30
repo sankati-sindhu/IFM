@@ -8,27 +8,34 @@ import androidx.lifecycle.LiveData;
 import java.util.List;
 
 public class BookmarkRepository {
-    private BookmarksDao mbookmarksDao;
-    private LiveData<List<Bookmark>> mAllBookmarks;
+    public BookmarksDao mbookmarksDao;
+    //private List<Bookmark> mAllBookmarks;
+    private LiveData<List<EventItem>> mGetBookmarks;
+
 
     BookmarkRepository(Application application) {
         BookmarkDatabase db = BookmarkDatabase.getDatabase(application);
         mbookmarksDao = db.bookmarksDao();
-        mAllBookmarks = mbookmarksDao.getAllBookmarks();
+        //mAllBookmarks = mbookmarksDao.getAllBookmarks();
+        mGetBookmarks = mbookmarksDao.getBookmarks();
+
     }
 
-    LiveData<List<Bookmark>> getAllBookmarks() {
-        return mAllBookmarks;
+
+    LiveData<List<EventItem>> getBookmarks() {
+        return mGetBookmarks;
     }
 
-    public void insert (Bookmark bookmark) {
-        new insertAsyncTask(mbookmarksDao).execute(bookmark);
+    public void insert (EventItem eventItem) {
+        new insertAsyncTask(mbookmarksDao).execute(eventItem);
     }
-    public void delete(Bookmark id){
+    public void delete(EventItem id){
         new deleteAsyncTask(mbookmarksDao).execute(id);
     }
+    public void update(EventItem eventItem){new updateAsyncTask(mbookmarksDao).execute(eventItem);}
 
-    private static class insertAsyncTask extends AsyncTask<Bookmark, Void, Void> {
+
+    private static class insertAsyncTask extends AsyncTask<EventItem, Void, Void> {
 
         private BookmarksDao mAsyncTaskDao;
 
@@ -37,12 +44,24 @@ public class BookmarkRepository {
         }
 
         @Override
-        protected Void doInBackground(final Bookmark... params) {
+        protected Void doInBackground(final EventItem... params) {
             mAsyncTaskDao.insert(params[0]);
             return null;
         }
     }
-    private static class deleteAsyncTask extends AsyncTask<Bookmark, Void, Void> {
+    private static class updateAsyncTask extends AsyncTask<EventItem,Void,Void>{
+        private BookmarksDao mAsyncTaskDao;
+
+        updateAsyncTask(BookmarksDao dao) {
+            mAsyncTaskDao = dao;
+        }
+        @Override
+        protected Void doInBackground(final EventItem... eventItems) {
+            mAsyncTaskDao.update(eventItems[0]);
+            return null;
+        }
+    }
+    private static class deleteAsyncTask extends AsyncTask<EventItem, Void, Void> {
 
         private BookmarksDao mAsyncTaskDao;
 
@@ -51,9 +70,13 @@ public class BookmarkRepository {
         }
 
         @Override
-        protected Void doInBackground(final Bookmark... params) {
+        protected Void doInBackground(final EventItem... params) {
             mAsyncTaskDao.delete(params[0]);
             return null;
         }
     }
+
+
+
+
 }

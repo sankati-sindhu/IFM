@@ -25,7 +25,7 @@
 
         app:layoutManager="LinearLayoutManager"
         tools:context="com.sindhu.myapplication.ItemListActivity"
-        tools:listitem="@layout/event_home_content" />
+        tools:listitem="@layout/fragment_home_item" />
 
 
 

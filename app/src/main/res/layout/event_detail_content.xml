@@ -10,20 +10,23 @@
     android:id="@+id/eventImage"
     android:layout_width="match_parent"
     android:layout_height="400dp"
-    android:src="@drawable/ic_bengal" />
+    android:src="@drawable/ic_bengal"
+    android:transitionName="imageTransaction"/>
 
 <TextView
     android:id="@+id/eventYear"
     style="@style/subtitle"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content" />
+    android:layout_height="wrap_content"
+    android:transitionName="yearTransaction"/>
 
 <TextView
     android:id="@+id/eventName"
     style="@style/title"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:textStyle="bold" />
+    android:textStyle="bold"
+    android:transitionName="titleTransaction"/>
 
 <View
     android:id="@+id/divider"

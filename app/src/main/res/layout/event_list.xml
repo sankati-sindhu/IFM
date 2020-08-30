@@ -9,4 +9,4 @@
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
     app:layoutManager="LinearLayoutManager"
-    tools:listitem="@layout/event_home_content" />
+    tools:listitem="@layout/fragment_home_item" />

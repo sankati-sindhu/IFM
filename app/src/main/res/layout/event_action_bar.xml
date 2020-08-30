@@ -10,7 +10,7 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/detail_toolbar"
         android:layout_width="match_parent"
-        android:background="?attr/colorBackgroundFloating"
+        android:background="@color/saffron_50"
         app:popupTheme="@style/AppTheme.PopupOverlay"
         android:layout_height="?attr/actionBarSize"
         >
@@ -20,7 +20,7 @@
             android:layout_height="match_parent"
             android:gravity="right|center"
             android:orientation="horizontal">
-            <ImageView
+           <!-- <ImageView
                 android:id="@+id/eventTextIncrease"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -29,12 +29,35 @@
                 android:layout_marginEnd="@dimen/large_margin"
 
 
-                />
-            <ImageView
+                />-->
+           <!-- <ImageView
                 android:id="@+id/eventTextDecrease"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_baseline_format_size_24"
+                android:layout_marginRight="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/large_margin"
+                />-->
+            <TextView
+                android:id="@+id/eventTextIncrease"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A+"
+                style="@style/TextAppearance.AppCompat.Button"
+                android:textSize="@dimen/text_size_1"
+                android:textStyle="bold"
+                android:layout_marginRight="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/large_margin"
+                />
+
+            <TextView
+                android:id="@+id/eventTextDecrease"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A-"
+                style="@style/TextAppearance.AppCompat.Button"
+                android:textSize="@dimen/text_size_1"
+                android:textStyle="bold"
                 android:layout_marginRight="@dimen/large_margin"
                 android:layout_marginEnd="@dimen/large_margin"
                 />
@@ -47,6 +70,7 @@
 
                 android:layout_marginEnd="@dimen/large_margin"
                 android:src="@drawable/ic_baseline_bookmark_24"/>
+
 
         </LinearLayout>
     </androidx.appcompat.widget.Toolbar>

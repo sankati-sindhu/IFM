@@ -5,8 +5,12 @@
     android:layout_height="wrap_content"
     android:clickable="true"
     android:forceDarkAllowed="true"
-    android:layout_margin="@dimen/small_margin"
+    android:layout_marginTop="@dimen/small_margin"
+    android:layout_marginBottom="@dimen/small_margin"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
     app:cardElevation="4dp"
     android:focusable="true">
+
     <include layout="@layout/event_content"/>
 </com.google.android.material.card.MaterialCardView>

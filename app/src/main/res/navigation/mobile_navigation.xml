@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/nav_about"
-        android:name="com.sindhu.myapplication.ui.slideshow.SlideshowFragment"
+        android:name="com.sindhu.myapplication.ui.aboutshow.AboutFragment"
         android:label="about"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_about" />
 </navigation>
